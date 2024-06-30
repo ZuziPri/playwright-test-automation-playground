@@ -5,6 +5,7 @@ import { LoginPage } from "./login";
 import { HoverPage } from "./hover";
 import { SelectorsPage } from "./selectors";
 import { ModalPage } from "./modal";
+import { TablePage } from "./table";
 
 export class AllPages {
   readonly buttonPage: ButtonPage;
@@ -13,6 +14,7 @@ export class AllPages {
   readonly HoverPage: HoverPage;
   readonly SelectorsPage: SelectorsPage;
   readonly ModalPage: ModalPage;
+  readonly TablePage: TablePage;
   readonly page: Page;
   
 
@@ -24,6 +26,7 @@ export class AllPages {
     this.HoverPage = new HoverPage(page);
     this.SelectorsPage = new SelectorsPage(page);
     this.ModalPage = new ModalPage(page);
+    this.TablePage = new TablePage(page);
   }
 
   async visit(url: string) {
