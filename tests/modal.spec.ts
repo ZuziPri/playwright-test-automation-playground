@@ -31,7 +31,8 @@ test.describe("Modal", () => {
     })
     test("Zavři modal kliknutím na šedou masku za modal oknem", async ({ page }) => {
         await pages.ModalPage.secretButton.click();
-        await pages.ModalPage.shadowMask.click();
+        await page.waitForTimeout(500);
+        await pages.ModalPage.shadowMask.click({ position: { x: 0, y: 0}});
 
         await expect(pages.ModalPage.nameSecret).toBeHidden();
         await expect(pages.ModalPage.textSecret).toBeHidden();
@@ -40,6 +41,6 @@ test.describe("Modal", () => {
     test("Ověř, že text obsahuje slovo Škarpa", async ({ page }) => {
         await pages.ModalPage.secretButton.click();
 
-        await expect(pages.ModalPage.shadowMask).toBeVisible();
+        await expect(pages.ModalPage.wordSkarpa).toBeVisible();
     })
 }) 
