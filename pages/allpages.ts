@@ -8,6 +8,7 @@ import { ModalPage } from "./modal";
 import { TablePage } from "./table";
 import { LoadingPage } from "./loading";
 import { FindFoxPage } from "./findfox";
+import { InputsPage } from "./inputs";
 
 export class AllPages {
   readonly buttonPage: ButtonPage;
@@ -19,6 +20,7 @@ export class AllPages {
   readonly TablePage: TablePage;
   readonly LoadingPage: LoadingPage;
   readonly FindFoxPage: FindFoxPage;
+  readonly InputsPage: InputsPage;
   readonly page: Page;
   
 
@@ -33,6 +35,7 @@ export class AllPages {
     this.TablePage = new TablePage(page);
     this.LoadingPage = new LoadingPage(page);
     this.FindFoxPage = new FindFoxPage(page);
+    this.InputsPage = new InputsPage(page);
   }
 
   async visit(url: string) {
