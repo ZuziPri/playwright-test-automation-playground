@@ -45,7 +45,7 @@ test.describe("Buttons", () => {
     );
   });
 
-  test.only("button data-qa should be clicked", async () => {
+  test("button data-qa should be clicked", async () => {
     await pages.buttonPage.buttonByDataQA.click({ timeout: 1000 });
     await expect(pages.buttonPage.buttonByDataQA).toHaveClass(/btn-success/);
   });
