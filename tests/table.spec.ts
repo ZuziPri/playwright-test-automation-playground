@@ -32,7 +32,7 @@ test.describe("Table", () => {
         await expect(pages.TablePage.whaleSize).toHaveText("OBROVITÁNSKÁ");
     })
 
-    test.only("Number of the rows is 7", async ({ page }) => {
+    test("Number of the rows is 7", async ({ page }) => {
         await expect(pages.TablePage.rows).toHaveCount(7);
     })
 })
